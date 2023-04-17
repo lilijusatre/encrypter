@@ -1,0 +1,264 @@
+:root{
+    --light-blue : #F3F5FC;
+    --light-gray: #D8DFE8;
+    --dark-blue: #0A3871;
+    --white: #FFFFFF;
+    --gray-400: #495057;
+    --gray-500: #343a40;
+    --Inter: 'Inter', sans-serif;
+    }
+body {
+    display: flex;
+    justify-content: space-between;
+    /* Light blue */
+    background-color: var(--light-blue);
+    /* Encriptador - 1 Desktop */
+    font-family: var(--Inter);
+    font-style: normal;
+    padding: 30px 15px;
+}
+/* Rectangle 1 logo and textarea */
+.logo{
+    width: 120px;
+    height: 48px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between; 
+}
+main div:nth-child(1){
+    flex-grow: 1;
+}
+#texto-usuario {
+    display: flex;
+    margin-top: 5%;
+
+}
+textarea {
+    min-height: 48px;
+    max-height: 58vh;
+    overflow-y: scroll;
+    width: 600px;
+    padding: 5px;
+    
+    color: var(--dark-blue);
+    font-family: var(--Inter);
+    font-size: 32px;
+    line-height: 150%; 
+        
+    border: none;
+    background: transparent;
+    margin-top: 80px;
+    
+}
+textarea:focus-visible{
+    outline: none;
+}
+textarea::placeholder{
+    color: var(--dark-blue);
+
+}
+section {
+    width: 400px;
+    height: 90vh;
+    /* White */
+    background: var(--white);
+    /* shadow */
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+/* Muñeco con diamante */
+section img{
+    width: 336px;
+    height: 304px;
+    padding: 32px;
+}
+/* frame 5, mensaje no encontrado */
+.message {
+    font-family: var(--Inter);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 24px;
+}
+.message p:first-child {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    margin: 0;
+    color: var(--gray-500)
+}
+.message p:last-child{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    margin-top: 16px;
+    color: var(--gray-400);
+}
+section button{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    left: 40px;
+    top: 850px;
+}
+
+/* solo letras minúsculas sin acentos */
+
+.encrypt-section p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    /* identical to box height, or 18px */
+    /* Gray/gray-400 */
+    color: var(--gray-400);
+    opacity: 0.8;
+}
+.encrypt-section{
+    display: flex;
+    flex-direction: column;
+}
+/* the type and size of the buttons */
+.buttons{
+    display: flex; 
+    gap: 24px;
+    margin-bottom: 53px;
+}
+.button{
+    font-family: var(--Inter);
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    
+    background-color: transparent;
+
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;  
+}
+.button-blue{
+    background-color: var(--dark-blue);
+    color: var(--white);
+
+}
+.button-blue:hover{
+    border: 2px solid var(--dark-blue);
+    background-color: var(--light-gray);
+    color: var(--dark-blue);
+}
+.button-gray {
+    border: 2px solid var(--dark-blue);  
+    color: var(--dark-blue);
+
+}
+div .button-gray{
+    background-color: var(--light-gray);
+}
+section .button-gray{
+    display: none;
+}
+.button-gray:hover{
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1439px){
+    .button{
+        width: 250px;
+    }
+    textarea{
+        width: 500px;
+    }
+    .buttons{
+        width: 500px;
+    }
+    .logo{
+        width: 110px;
+        height: 38px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
+    body{
+        flex-direction: column;
+        padding: 0;
+        padding-top: 70px;
+    }
+    main{
+        height: 75vh;
+        padding: 0 30px;
+    }
+    section{
+        height: auto;
+        width: auto;
+        margin: 40px;
+        padding: 32px;
+    }
+    section img{
+        display: none;
+    }
+    .buttons{
+        justify-content: space-between;
+    }
+}
+@media only screen and (max-device-width: 767px) {
+    body{
+        flex-direction: column;
+        padding: 24px 16px;
+        display: flex;
+    }
+    main{
+        flex-direction: column;
+        height: 70vh;
+        padding: 0 30px;
+    }
+    textarea{
+        font-size: 28px;
+    }
+    .encrypt-section {
+        flex-direction: column;
+        
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .button{
+        width: 100%;
+    }
+    section{
+        height: auto;
+        width: auto;
+        margin: 60px 30px 40px;
+        padding: 10px;
+    }
+    section img{
+        display: none;
+    }
+}
+
+.found{
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    line-height: 36px;  
+    color: var(--gray-400);
+    padding: 32px;
+    height: 50vh;
+    width: 350px;
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+}
