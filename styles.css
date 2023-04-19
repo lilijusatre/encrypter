@@ -7,14 +7,19 @@
     --gray-500: #343a40;
     --Inter: 'Inter', sans-serif;
     }
-body {
+body{
+    min-width: 320px;   
+    max-width: 1400px; 
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-blue);
+    font-style: normal;
+}
+main {
     display: flex;
     justify-content: space-between;
     /* Light blue */
-    background-color: var(--light-blue);
-    /* Encriptador - 1 Desktop */
     font-family: var(--Inter);
-    font-style: normal;
     padding: 30px 15px;
 }
 /* Rectangle 1 logo and textarea */
@@ -22,12 +27,12 @@ body {
     width: 120px;
     height: 48px;
 }
-main{
+.left{
     display: flex;
     flex-direction: column;
     justify-content:space-between; 
 }
-main div:nth-child(1){
+.left div:nth-child(1){
     flex-grow: 1;
 }
 #texto-usuario {
@@ -59,7 +64,7 @@ textarea::placeholder{
     color: var(--dark-blue);
 
 }
-section {
+.right {
     width: 400px;
     height: 90vh;
     /* White */
@@ -73,7 +78,7 @@ section {
     justify-content: space-around;
 }
 /* Muñeco con diamante */
-section img{
+.right img{
     width: 336px;
     height: 304px;
     padding: 32px;
@@ -102,7 +107,7 @@ section img{
     margin-top: 16px;
     color: var(--gray-400);
 }
-section button{
+.right button{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -112,7 +117,6 @@ section button{
 }
 
 /* solo letras minúsculas sin acentos */
-
 .encrypt-section p {
     font-weight: 400;
     font-size: 12px;
@@ -129,8 +133,9 @@ section button{
 /* the type and size of the buttons */
 .buttons{
     display: flex; 
-    gap: 24px;
+    gap: 14px;
     margin-bottom: 53px;
+    padding-right: 10px;
 }
 .button{
     font-family: var(--Inter);
@@ -165,14 +170,32 @@ section button{
 div .button-gray{
     background-color: var(--light-gray);
 }
-section .button-gray{
+.right .button-gray{
     display: none;
 }
 .button-gray:hover{
     background-color: var(--dark-blue);
     color: var(--white);
 }
-
+footer{
+    display: flex;
+    align-items: center;
+    font-family: var(--Inter);
+    margin: 0 auto;
+}
+/*  div that shows the encrypted/decrypted text */
+.found{
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    line-height: 36px;  
+    color: var(--gray-400);
+    padding: 32px;
+    height: 50vh;
+    width: 350px;
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+}
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1439px){
     .button{
@@ -191,35 +214,39 @@ section .button-gray{
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1023px) {
-    body{
+    main{
         flex-direction: column;
         padding: 0;
         padding-top: 70px;
     }
-    main{
+    .left{
         height: 75vh;
         padding: 0 30px;
     }
-    section{
+    .right{
         height: auto;
         width: auto;
         margin: 40px;
         padding: 32px;
     }
-    section img{
+    .right img{
         display: none;
     }
     .buttons{
         justify-content: space-between;
     }
 }
-@media only screen and (max-device-width: 767px) {
-    body{
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    main{
+        flex-direction: column;
+    }
+    
+    .left{
         flex-direction: column;
         padding: 24px 16px;
         display: flex;
     }
-    main{
+    .right{
         flex-direction: column;
         height: 70vh;
         padding: 0 30px;
@@ -239,7 +266,7 @@ section .button-gray{
     .button{
         width: 100%;
     }
-    section{
+    .right{
         height: auto;
         width: auto;
         margin: 60px 30px 40px;
@@ -248,17 +275,8 @@ section .button-gray{
     section img{
         display: none;
     }
+    .found {
+        width: 260px;
+    }
 }
 
-.found{
-    display: flex;
-    flex-direction: column;
-    font-size: 24px;
-    line-height: 36px;  
-    color: var(--gray-400);
-    padding: 32px;
-    height: 50vh;
-    width: 350px;
-    overflow-y: auto;
-    overflow-wrap: anywhere;
-}
