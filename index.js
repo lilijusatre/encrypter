@@ -55,8 +55,18 @@ function copyContent(){
     range.selectNodeContents(message);
     selected.removeAllRanges();
     selected.addRange(range);
-    document.execCommand('copy');
-    
+    // document.execCommand('copy');
+    navigator.clipboard.writeText(range)
+        .then(() => {
+            let copiedMessage = document.querySelector('#copied-message');
+            copiedMessage.textContent = "Texto copiado al porta papeles";
+            setTimeout(function() {
+                copiedMessage.textContent = "";
+            }, 1000);
+        })
+        .catch((err) => {
+            console.error('Error al copiar el texto: ', err);
+        });
 }
 
 

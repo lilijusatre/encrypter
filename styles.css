@@ -191,10 +191,15 @@ footer{
     line-height: 36px;  
     color: var(--gray-400);
     padding: 32px;
-    height: 50vh;
+    height: 60vh;
     width: 350px;
     overflow-y: auto;
     overflow-wrap: anywhere;
+}
+#copied-message {
+    color: var(--gray-400);
+    font-size: small;
+    margin: 0 auto;
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1439px){
