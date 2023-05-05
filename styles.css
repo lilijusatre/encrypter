@@ -191,7 +191,7 @@ footer{
     line-height: 36px;  
     color: var(--gray-400);
     padding: 32px;
-    height: 60vh;
+    height: 65vh;
     width: 350px;
     overflow-y: auto;
     overflow-wrap: anywhere;
