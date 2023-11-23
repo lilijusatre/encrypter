@@ -1,51 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  </head>
 
-<body> 
-    
+  <body>
     <main>
-        <img class="logo" src="assets/Logo.png" alt="logo de alura" />
-        <section class="left">
-            <div id="texto-usuario">
-                <textarea id="myTextarea" placeholder="Ingrese el texto aquí"></textarea> 
-            </div>
-            <div class="encrypt-section">
-                <p><i class="fa-solid fa-circle-exclamation"></i> Sólo letras minúsculas sin acento.</p>
-                <div class="buttons" id="optionButtons">
-                    <button class="button button-blue" id="encrypt"> Encriptar </button>
-                    <button class="button button-gray" id="decrypt"> Desencriptar </button>
-                </div>
-            </div>
-        </section>
-        <section class="right">
-            <div id="notfound">
-                <img src="assets/Muñeco.png" alt="Un muñeco inspeccionando un diamante" />
-                <div class="message">
-                    <p> Ningún mensaje fue encontrado</p>
-                    <p> Ingresa el texto que desees encriptar o deseencriptar.</p>
-                </div>
-            </div>
-            <button class="button button-gray" id="copy"> Copiar </button>
-            <div id="copied-message"></div>
-        </section>
-    </main>   
+      <i class="fa-solid fa-qrcode" style="color: #0b3871; font-size: 72px"></i>
+      <section class="left">
+        <div id="texto-usuario">
+          <textarea
+            id="myTextarea"
+            placeholder="Ingrese el texto aquí"
+          ></textarea>
+        </div>
+        <div class="encrypt-section">
+          <p>
+            <i class="fa-solid fa-circle-exclamation"></i> Sólo letras
+            minúsculas sin acento.
+          </p>
+          <div class="buttons" id="optionButtons">
+            <button class="button button-blue" id="encrypt">Encriptar</button>
+            <button class="button button-gray" id="decrypt">
+              Desencriptar
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="right">
+        <div id="notfound">
+          <img
+            src="assets/Muñeco.png"
+            alt="Un muñeco inspeccionando un diamante"
+          />
+          <div class="message">
+            <p>Ningún mensaje fue encontrado</p>
+            <p>Ingresa el texto que desees encriptar o deseencriptar.</p>
+          </div>
+        </div>
+        <button class="button button-gray" id="copy">Copiar</button>
+        <div id="copied-message"></div>
+      </section>
+    </main>
     <footer>
-        <p class="coyright"> © Desarrollado por Lilia Salazar </p>
+      <p class="coyright">© Desarrollado por Lilia Salazar</p>
     </footer>
-    
-    <script src="index.js">
-    </script>
-</body>
+
+    <script src="index.js"></script>
+  </body>
 </html>
